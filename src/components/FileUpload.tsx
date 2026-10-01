@@ -41,7 +41,7 @@ export function FileUpload({
     setIsDragging(false)
   }, [])
 
-  const validateFile = (file: File): boolean => {
+  const validateFile = useCallback((file: File): boolean => {
     setError(null)
     
     const acceptedTypes = accept.split(",").map(t => t.trim())
@@ -69,7 +69,7 @@ export function FileUpload({
     }
     
     return true
-  }
+  }, [accept, maxSize])
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault()
@@ -79,7 +79,7 @@ export function FileUpload({
     if (file && validateFile(file)) {
       onFileSelect(file)
     }
-  }, [onFileSelect])
+  }, [onFileSelect, validateFile])
 
   const handleFileInput = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -87,7 +87,7 @@ export function FileUpload({
       onFileSelect(file)
     }
     e.target.value = ""
-  }, [onFileSelect])
+  }, [onFileSelect, validateFile])
 
   const handleClear = useCallback(() => {
     setError(null)

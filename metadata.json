@@ -1,0 +1,7 @@
+{
+  "name": "RoadVision AI",
+  "description": "Smart infrastructure redevelopment and pothole detection powered by AI",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

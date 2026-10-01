@@ -272,7 +272,7 @@ export default function Home() {
                   <span className="text-primary"> City Officials</span>
                 </h2>
                 <p className="text-muted-foreground text-lg mb-8">
-                  Whether you're planning city-wide infrastructure upgrades or identifying maintenance priorities, 
+                  Whether you&apos;re planning city-wide infrastructure upgrades or identifying maintenance priorities, 
                   RoadVision AI provides the visual insights you need to make informed decisions.
                 </p>
                 
